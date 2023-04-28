@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sus</title>
+    <html>
+    <head>
+        <style>
+
+            body{margin:0;}
+
+            .canvas{
+                width:800px;
+                height:280px;
+                transform:translate3d(50%, 80%, 0px);
+            }
+        </style>
+    </head>
+    <body>
+
+        <canvas id="Canvas1" class="canvas" width="520px" height="650px"></canvas>
+      
+        <script>
+          const canvas = document.getElementById("Canvas1")
+          const ctx = canvas.getContext("2d")
+      
+          // Draw 1 red rectangle
+          ctx.fillStyle = "red"
+          ctx.fillRect(150, 150, 200, 200)
+
+                
+          // Draw a red ellipse
+          ctx.fillStyle = "red"
+          ctx.beginPath()
+          ctx.ellipse(250, 150, 100, 40, 0, 0, 2 * Math.PI)
+          ctx.fill()
+
+      
+          // Draw 3 red rectangles with rounded corners
+          ctx.strokeStyle = "red"
+          ctx.lineJoin = "round"
+
+          ctx.lineWidth = 80;
+          ctx.strokeRect(340, 210, 20, 80) //backpack
+          
+          /*
+          ctx.lineWidth = 52
+          ctx.strokeRect(176, 350, 30, 50) //foot 1
+          ctx.strokeRect(294, 350, 30, 50) // foot 2
+          */
+          
+          // Draw a light cyan rectangle with rounded corners
+          ctx.strokeStyle = "lightcyan"
+          ctx.lineWidth = 80
+          ctx.lineJoin = "round"
+          ctx.strokeRect(150, 205, 100, 1)
+
+          
+          // le footsies UwU
+          var bunsB = new Image()
+          bunsB.src = "bunBott.png"
+          var foot = new Image()
+          foot.src = "foot.png"
+
+          var eye = new Image()
+          eye.src = "eye.png"
+          var eye2 = new Image()
+          eye2.src = "eye2.png"
+          var lips = new Image()
+          lips.src = "lips1.png"
+          
+
+          var hair = new Image()
+          hair.src = "hair.png"
+          var lash = new Image()
+          lash.src = "lashes.png"
+          var nose = new Image()
+          nose.src = "nose.png"
+          var hand1 = new Image()
+          hand1.src = "hand1.png"
+          var hand2 = new Image()
+          hand2.src = "hand2.png"
+          var bunsT = new Image()
+          bunsT.src = "bunTop.webp"
+
+
+
+          lips.onload = function() {
+            ctx.drawImage(lips, 120, 220, 150, 80)
+          }
+        
+          foot.onload = function() {
+            ctx.drawImage(foot, 55, 350, 150, 100)
+            ctx.drawImage(foot, 205, 350, 150, 100)
+          }
+          eye.onload = function() {
+            ctx.drawImage(eye, 100, 150, 120, 80)
+          }
+          nose.onload = function() {
+            ctx.drawImage(nose, 120, 180, 150, 60)
+          }
+          eye2.onload = function() {
+            ctx.drawImage(eye, 190, 150, 120, 80)
+          }
+
+          hair.onload = function() {
+            ctx.drawImage(hair, 50, 90, 360, 180)
+          }
+          lash.onload = function() {
+            ctx.drawImage(lash, 90, 135, 120, 80)
+            ctx.drawImage(lash, 179, 135, 120, 80)
+            
+          }
+          hand1.onload = function() {
+            ctx.drawImage(hand1, 70, 250, 120, 100)
+          }
+
+          hand2.onload = function() {
+            ctx.drawImage(hand2, 260, 250, 120, 100)
+          }
+
+          bunsT.onload = function() {
+            ctx.drawImage(bunsT, 20, -50, 430, 260)
+          }
+
+          bunsB.onload = function() {
+            ctx.drawImage(bunsB, 30, 400, 405, 160)
+          }
+
+
+        
+          ctx.font = "80px Arial"
+          ctx.fillStyle = "black"
+          ctx.textAlign = "center"
+          ctx.textBaseline = "middle"
+          ctx.fillText("✨s  u  s✨  ", 250, 600)
+        </script>
+      
+      </body>
+      </html>
